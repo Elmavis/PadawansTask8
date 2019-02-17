@@ -20,7 +20,7 @@ namespace PadawansTask8
 
             for (int i = 0; i < text.Length; i++)
             {
-                if (Char.IsLower(arr[i]))
+                if (Char.IsLetter(arr[i]))
                     tempWord += arr[i];
                 else 
                 {
