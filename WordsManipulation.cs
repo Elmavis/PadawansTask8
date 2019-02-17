@@ -6,17 +6,6 @@ namespace PadawansTask8
 {
     public static class WordsManipulation
     {
-        private static bool IsDelim(char ch)
-        {
-            char[] delims = { '.', ',', '!', '?', '-', ':', ';', ' ' };
-
-            for (int i = 0; i < delims.Length; i++)
-                if (ch == delims[i])
-                    return true;
-
-            return false;
-        }
-
         public static void RemoveDuplicateWords(ref string text)
         {
             if (text == null)
@@ -33,7 +22,7 @@ namespace PadawansTask8
             {
                 if (Char.IsLower(arr[i]))
                     tempWord += arr[i];
-                else if (IsDelim(arr[i]))
+                else 
                 {
                     if (!l.Contains(tempWord))
                     {
@@ -44,8 +33,6 @@ namespace PadawansTask8
                     result += arr[i];
                     tempWord = "";
                 }
-                else
-                    throw new ArgumentException();
             }
 
             text = result;
